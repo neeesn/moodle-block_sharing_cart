@@ -17,7 +17,7 @@ $sectionnumber = required_param('section', PARAM_INT);
 if ($courseid == SITEID) {
     $returnurl = new moodle_url('/');
 } else {
-    $returnurl = new moodle_url('/course/view.php', array('id' => $courseid));
+    $returnurl = new moodle_url('/course/view.php', array('id' => $courseid, 'section' => $sectionnumber));
 }
 
 try {
